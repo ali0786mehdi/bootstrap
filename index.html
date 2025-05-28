@@ -10,29 +10,49 @@
 
     <title>Hello, world!</title>
     <style>
-      .jumbotron{
-        background-image: url(bcg\ image.jpeg);
-        text-align: center;
-        margin-top: 50px;
-        color: white !important;
-      }
-      #content{
-        text-align: center;
-      }
-      .deck{
-        margin-left: 80px;
-        padding-top: 20px;
-      }
-      #appstoreicon{
-        width: 200px;
-      }
-      #footer{
-        background-color: aqua;
-        padding-top: 150px;
-        text-align: center;
-        margin-top: 50px;
-        padding-bottom: 150px;
-      }
+  .jumbotron {
+    background-image: url(bcg\ image.jpeg);
+    text-align: center;
+    margin-top: 50px;
+    color: white !important;
+  }
+
+  #content {
+    text-align: center;
+  }
+
+  .deck {
+    margin-left: 0; /* Changed from 65px to 0 to let Bootstrap handle spacing */
+    padding-top: 20px;
+    justify-content: center; /* Center the cards inside the row */
+  }
+
+  /* Make sure cards are centered on mobile */
+  @media (max-width: 768px) {
+    .deck .col {
+      display: flex;
+      justify-content: center;
+    }
+
+    .card-img-top {
+      margin: 0 auto; /* Center the image inside the card */
+      display: block;
+    }
+  }
+
+  #appstoreicon {
+    width: 200px;
+  }
+
+  #footer {
+    background-color: aqua;
+    padding-top: 150px;
+    text-align: center;
+    margin-top: 50px;
+    padding-bottom: 150px;
+  }
+</style>
+
     </style>
   </head>
 
